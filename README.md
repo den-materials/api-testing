@@ -1,5 +1,6 @@
 <!--WDI started 9:46 ended 10:36 -->
 <!--WDI4 started 9:51 -->
+<!--WDI5 9:50 -->
 
 # Introduction
 
@@ -16,6 +17,7 @@ Just like usual, you will need to create a new node project.  Don't forget to cr
 > **Hint:** you should use the `--save-dev` flag to install `mocha` and `chai` so they get saved into `package.json` dependencies (but only for your local machine).   You should use the `--save` flag to install `request` so it will get saved into `package.json` dependencies for all machines.
 
 <!--10:00 WDI4 when devs come back -->
+<!--10:00 WDI5 coming back -->
 
 <!--
 
@@ -36,9 +38,9 @@ Then instructor runs this:
 Let's start by writing 2 pending tests that should be passing once we have a good request.
 
 - "should receive a 200 / OK HTTP status code"
-- "should have a Title in the body"
+- "should have a sentence in the body"
 
-> **Note**: When you write these tests for yourself, make sure you are checking for fields that you expect your API to return in the body (not necessarily `Title`).
+> **Note**: When you write these tests for yourself, make sure you are checking for fields that you expect your API to return in the body (not necessarily `sentence`).
 
 
 <!--
@@ -51,6 +53,7 @@ describe("Shakes", function() {
 });
 -->
 
+<!--WDI5 10:06  -->
 <!--10:10 WDI4 -->
 
 Now that we have our tests, let's try to make a request and fail our first test.  [This documentation](https://www.npmjs.com/package/request) has some good examples of making requests with the `request` npm package we used earlier.
@@ -65,7 +68,7 @@ describe("Shakes", function() {
 		});
 	});
 
-	it("should have a Title in the body");
+	it("should have a sentence in the body");
 });
 -->
 
@@ -86,7 +89,7 @@ describe("Shakes", function() {
 		});
 	});
 
-	it("should have a Title in the body");
+	it("should have a sentence in the body");
 });
 -->
 
@@ -139,6 +142,7 @@ Woo hoo, we're failing again!  But why?  If I `console.log(body)` it definitely 
 There, that's better.  Now we have two passing tests.  However, there are a number of ways we can improve these test.  From here, the sky is the limit.  Try the challenges below, then make these tests more refined for your API of choice.
 
 <!--10:54 WDI4, lots of struggling students -->
+<!--WDI5 10:30  -->
 
 ## Challenges
 
@@ -147,6 +151,8 @@ Make sure your tests still pass after you do any *refactoring*.
 1. This works great for one query on one API, but this would be **WAY** more useful if we could use this to test a query to any URL.  Make the request URL a variable so you can use this to test a bunch of functionality any time you tweak the URL.
 2. Two requests in less than two seconds?  This is a little crazy.  What mocha function can we use to run a request one time and save the response to test in multiple ways later on?  (This is challenging.  Be careful with scope, variable names, and the `done` function here.)
 3. A good idea to DRY out your code would be to use only one file to do all your requests and require it here in the test file and elsewhere in your app whenever needed.  Pull the requests into their own file and export them so we can use them anywhere.
+
+<!--WDI5 10:40 -->
 
 ## References
 
