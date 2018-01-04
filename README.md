@@ -1,6 +1,7 @@
 <!--WDI started 9:46 ended 10:36 -->
 <!--WDI4 started 9:51 -->
 <!--WDI5 9:50 -->
+<!--WDI6 9:53 -->
 
 # Introduction
 
@@ -10,6 +11,8 @@ So now we have an idea of how to write tests for our Javascript code with Mocha 
 
 For this lab, we will model these tests with the [ShakeItSpeare API](http://shakeitspeare.com/). Once we're done, you should choose an API that you think will be helpful for your Project, and test that in a similar way.  The structure of the tests will look the same, but you will need to use a different URL and change some of the details to match your API.
 
+<!--WDI6 9:57 turning over to devs -->
+
 ## Setup
 
 Just like usual, you will need to create a new node project.  Don't forget to create a folder called `test` and put a `<yourAPIname>_spec.js` file inside it.  See if you can remember how to do this with no directions.
@@ -18,6 +21,7 @@ Just like usual, you will need to create a new node project.  Don't forget to cr
 
 <!--10:00 WDI4 when devs come back -->
 <!--10:00 WDI5 coming back -->
+<!--10:07 WDI6 coming back -->
 
 <!--
 
@@ -56,6 +60,8 @@ describe("Shakes", function() {
 <!--WDI5 10:06  -->
 <!--10:10 WDI4 -->
 
+<!--WDI6 coming back 10:18 -->
+
 Now that we have our tests, let's try to make a request and fail our first test.  [This documentation](https://www.npmjs.com/package/request) has some good examples of making requests with the `request` npm package we used earlier.
 
 A good way to make a failing test is to assert that `true` equals `false`.  If we put this assertion inside our request, we should see some red...
@@ -75,6 +81,7 @@ describe("Shakes", function() {
 ...wait, that test passes?  What's going on here?  Well, remember that async Javascript problem?  Here it is again.  Our test runs in its entirety before we get the response back from our API.  When we get the response back, our assertion is too late, and our test sees *no errors*.  Thus, our test passes.
 
 <!--10:24 WDI4 -->
+<!--10:28  WDI6 -->
 
 But that's not TDD.  We need to fail our test first.  Please mocha, give us a way to see that beautiful red text again!  Lucky for us, there is such a thing.  It's called the `done` function.
 
@@ -141,6 +148,7 @@ Woo hoo, we're failing again!  But why?  If I `console.log(body)` it definitely 
 
 There, that's better.  Now we have two passing tests.  However, there are a number of ways we can improve these test.  From here, the sky is the limit.  Try the challenges below, then make these tests more refined for your API of choice.
 
+<!--WDI6 11:19  -->
 <!--10:54 WDI4, lots of struggling students -->
 <!--WDI5 10:30  -->
 
